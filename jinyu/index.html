@@ -119,25 +119,25 @@
     </style>
     <script>
         function doit(){
-            if(localStorage.sj==undefined ||localStorage.sj=="false"){
-                localStorage.sj=true;
+            if(localStorage.getItem(sj)==undefined ||localStorage.getItem(sj)=="false"){
+                localStorage.setItem(sj,"true");
                 document.getElementById("jie").setAttribute("class","check");
-                localStorage.jinyu=parseInt(localStorage.jinyu)+1;
+                localStorage.setItem("jinyu",parseInt(localStorage.getItem("jinyu"))+1);
             }else{
-                if(localStorage.sj=="true"){
+                if(localStorage.getItem(sj)=="true"){
                     document.getElementById("jie").setAttribute("class","uncheck");
-                    localStorage.sj=false;
-                    localStorage.jinyu=parseInt(localStorage.jinyu)-1;
+                    localStorage.setItem(sj,false);
+                    localStorage.setItem("jinyu",parseInt(localStorage.getItem("jinyu"))-1);
                 }
             }
-            if(parseInt(localStorage.jinyu)<0){
-                localStorage.jinyu=0;
+            if(localStorage.getItem("jinyu")<0){
+                localStorage.setItem("jinyu",0);
             }
         }
         function init(){
             
-            if(localStorage.jinyu==undefined){
-                localStorage.jinyu=0;
+            if(localStorage.getItem("jinyu")==undefined){
+                localStorage.setItem("jinyu",0);
             }
             
             var now=new Date();
@@ -151,7 +151,7 @@
                 d="0"+d;
             }
             sj=m+""+d;
-            if(localStorage.sj==undefined){
+            if(localStorage.getItem(sj)==undefined){
                 document.getElementById("jie").setAttribute("class","uncheck");
             }else{
                 document.getElementById("jie").setAttribute("class","check");
