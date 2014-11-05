@@ -15,17 +15,15 @@
             font-family: "微软雅黑";
         }
         body{
-            background: url(res/book.png),url(res/bg2.png),url(res/bg.png);
-            background-position: center top;
+            url(res/bg.png);
+            background-repeat: repeat;
         }
         #topbar{
             background: url(res/topbar.png);
             width: 100%;
             height: 64px;
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            right: 0px;
+            margin: 0 auto;
+            position: relative;
         }
         #logo_pan{
             position:absolute;
@@ -44,13 +42,36 @@
             background:url(res/logo.png);
             background-position: center top;
         }
+        .h1{
+            position: relative;
+            width: 100%;
+            height: 40px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 40px;
+        }
+        #wrapbox{
+            width: 1100px;
+            height: 690px;
+            margin: 0 auto;
+            margin-top: 0px;
+            position: relative;
+            overflow: hidden;
+            background:none;
+            background-position: center;
+        }
         #wrap{
             width: 922px;
             height: 600px;
-            margin: 0 auto;
-            margin-top: 250px;
-            position: relative;
+            position: absolute;
             overflow: hidden;
+            top: 54px;
+            left: 88px;
+        }
+        .footer{
+            width: 100%;
+            height: auto;
+            text-align: center;
         }
     </style>
     <script type="text/javascript" src="ext/jquery.min.1.7.js"></script>
@@ -64,8 +85,11 @@
                 <div id="logo" title="新京报11周年庆"></div>
             </div>
         </div>
+        <div class="h1"><img src="res/h1.png"></div>
+        <div id="wrapbox">
         <div id="wrap">
             <div id="flipbook">
+
                 <div class="hard"><img src="pages/begin.png"></div>
                 <div class="page"><img src="pages/1.png"></div>
                 <div class="page"><img src="pages/2.png"></div>
@@ -73,8 +97,8 @@
                     <div class="box">
                         <h2>目录</h2>
                         <ul>
-                            <li><a href="#">目录栏目01</a></li>
-                            <li><a href="#">目录栏目02</a></li>
+                            <li onclick="gotoPage(6)">青春与文学</li>
+                            <li onclick="gotoPage(8)">科技与战争</a></li>
                             <li><a href="#">目录栏目03</a></li>
                             <li><a href="#">目录栏目04</a></li>
                             <li><a href="#">目录栏目05</a></li>
@@ -113,6 +137,7 @@
                         </ul>
                     </div>
                 </div>
+
                 <div class="page">
                     <div class="box">
                         <div class="facebg">
@@ -124,14 +149,111 @@
     目前青春文学已经占上市场的顶峰了，它的读者已经超过名
     著的读者了，读者大部分是12——26岁的年轻人，它有受
     大众欢迎之处，但是也有弊处。</p>
-                        </div>
+                            </div>
+                            <img class="face1" src="pages/hanhan.png">
+                            <img class="face2" src="pages/guojingming.png">
+                            <div class="info1">
+                                <h2>韩寒</h2>
+                                <p>韩寒，1982年9月23日出生于上海市金山区亭林
+镇，中国作家、导演、职业赛车手。他以《杯中
+窥人》获得首届全国新概念作文比赛一等奖。</p>
+                            </div>
+                            <div class="info2">
+                                <h2>郭敬明</h2>
+                                <p>郭敬明，1983年6月6日出生于四川省自贡市，中
+国作家、上海最世文化发展有限公司董事长《最
+小说》等杂志主编。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="page"></div>
-                <div class="hard"></div>
+                <div class="page">
+                    <div class="box">
+                        <div class="pagebg">
+                            <img class="face" src="pages/face2.png">
+                            <div class="play" onclick="play('video_1')"></div>
+                            <video id="video_1" src="video/oceans.webm" controls>
+                                
+                            </video>
+                            <div class="pagepage">
+                                <span class="q">Q：</span>2014年，你个人最大的变化是什么？<br>
+                                <span class="a">韩：</span>我覺得我時而痛苦這件事情，你們不需要了解，只要我自
+                                己冷暖自知就可以，你可以問世界上最成功最幸福的人，其實
+                                都有痛苦的一面，沒有被大家發現而已。<br><br>
+                                <span class="a">郭：</span>不是每件事，都能給人生帶來什麼，人生的時光，總需要
+                                去度過。我選擇這樣度過。<br>
+                                <span class="q">Q：</span>2014年，你所能感受到的最让你印象深刻的变化是什么？
+                                <span class="a">韩：</span>我很少想那麼久遠，你問我下周的比賽在哪裡，我經常都
+                                不知道。在做事情的時候，我希望看的遠一些.<br>
+                                <span class="a">郭：</span>人家不需要形容我的時候，我很爽，人家硬要形容我的時
+                                候，我最不爽。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                <div class="page">
+                    <div class="box">
+                        <div class="facebg">
+                            <h1>科技与战争</h1>
+                            <div class="info">
+                                       <p>科技的进步使得资源分配更平均，同早先时候战争促进科技不同，现在的科技并不会促进战争。但是科技可以让战争更智能化。但这并不是我们所愿意发生的事情。科技发展到一定程度，战争是必然的。人类肯定要同智能化的脱离人类控制的机器人打一场持久战。最终的结局要么是人类胜利，要么是机器人胜利。</p>
+                            </div>
+                            <img class="face1" src="pages/aliens.png">
+                            <img class="face2" src="pages/aliens2.png">
+                            <div class="info1">
+                                <h2>外星人</h2>
+                                <p>#$%，1700年1月1日出生于仙女座星系X10星球，曾任银河系舰队指挥长。</p>
+                            </div>
+                            <div class="info2">
+                                <h2>地球人</h2>
+                                <p>奥巴马，美利坚合众国总统。锡安山长老会发言人，共济会33级别会员。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hard">
+                    <div class="box">
+                        <div class="pagebg">
+                            <img class="face" src="pages/ufo.jpg">
+                            <div class="play" onclick="play('video_2')"></div>
+                            <video id="video_2" title="Area 51 Scientist Boyd Bushman Makes Alien Confession in Video" src="video/51.mp4" controls>
+                                
+                            </video>
+                            <div class="pagepage">
+                                <span class="q">Q：</span>2014年，你个人最大的变化是什么？<br>
+                                <span class="a">韩：</span>我覺得我時而痛苦這件事情，你們不需要了解，只要我自
+                                己冷暖自知就可以，你可以問世界上最成功最幸福的人，其實
+                                都有痛苦的一面，沒有被大家發現而已。<br><br>
+                                <span class="a">郭：</span>不是每件事，都能給人生帶來什麼，人生的時光，總需要
+                                去度過。我選擇這樣度過。<br>
+                                <span class="q">Q：</span>2014年，你所能感受到的最让你印象深刻的变化是什么？
+                                <span class="a">韩：</span>我很少想那麼久遠，你問我下周的比賽在哪裡，我經常都
+                                不知道。在做事情的時候，我希望看的遠一些.<br>
+                                <span class="a">郭：</span>人家不需要形容我的時候，我很爽，人家硬要形容我的時
+                                候，我最不爽。<br><br>
+                                <span class="q">Q：</span>2014年，你个人最大的变化是什么？<br>
+                                <span class="a">韩：</span>我覺得我時而痛苦這件事情，你們不需要了解，只要我自
+                                己冷暖自知就可以，你可以問世界上最成功最幸福的人，其實
+                                都有痛苦的一面，沒有被大家發現而已。<br><br>
+                                <span class="a">郭：</span>不是每件事，都能給人生帶來什麼，人生的時光，總需要
+                                去度過。我選擇這樣度過。<br>
+                                <span class="q">Q：</span>2014年，你所能感受到的最让你印象深刻的变化是什么？
+                                <span class="a">韩：</span>我很少想那麼久遠，你問我下周的比賽在哪裡，我經常都
+                                不知道。在做事情的時候，我希望看的遠一些.<br>
+                                <span class="a">郭：</span>人家不需要形容我的時候，我很爽，人家硬要形容我的時
+                                候，我最不爽。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -->
+                
             </div>
         </div>
+        </div>
+        <div class="footer"><img src="res/index_msg.png"></div>
+        <div class="footer"><img src="res/text_return_index.png" onclick="gotoPage(1)"><img src="res/text_return_menu.png" onclick="gotoPage(4)"></div>
         <style>
             #flipbook{
                 
@@ -187,20 +309,19 @@
                 font-weight: 100;
             }
             .info{
-                
-                height: 176px;
+                height: 170px;
                 overflow: hidden;
                 background: #e9e9e9;
                 position: absolute;
-                top: 60px;
+                top: 79px;
                 left: 20px;
                 right: 20px;
                 border-radius: 10px;
             }
             p{
                 position: absolute;
-                font-size: 15px;
-                line-height: 23px;
+                font-size: 14px;
+                line-height: 25px;
                 
                 height: auto;
                 top: 10px;
@@ -217,13 +338,126 @@
                 background: url(pages/facebg.png);
                 background-position: left top;
             }
+            .pagebg{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                right: 0px;
+                bottom: 0px;
+                background: url(pages/pagebg.png);
+                background-position: left top;
+            }
+            .face{
+                position: absolute;
+                top: 85px;
+                width: 278px;
+                height: 157px;
+                left: 94px;
+            }
+            .face1{
+                position: absolute;
+                top: 287px;
+                left: 28px;
+                width: 81px;
+                height: 81px;
+                overflow: hidden;
+            }
+            .face2{
+                position: absolute;
+                top: 421px;
+                left: 28px;
+                width: 81px;
+                height: 81px;
+                overflow: hidden;
+            }
+            .info1{
+                position: absolute;
+                top: 288px;
+                left: 123px;
+                width: 278px;
+                height: 80px;
+            }
+            .info2{
+                position: absolute;
+                top: 423px;
+                left: 123px;
+                width: 278px;
+                height: 80px;
+            }
+            .info1 h2,.info2 h2{
+                font-size: 18px;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                line-height:10px;
+            }
+            .info1 p,.info2 p{
+                font-size: 12px;
+                position: absolute;
+                top: 25px;
+                left: 0px;
+                line-height: 18px;
+            }
+            .play{
+                position: absolute;
+                width: 53px;
+                height: 53px;
+                background: url(res/play.png);
+                top: 145px;
+                left: 205px;
+                cursor: pointer;
+            }
+            .pagepage{
+                position: absolute;
+                top: 270px;
+                left: 70px;
+                right: 20px;
+                bottom: 20px;
+                font-size: 14px;
+                line-height: 20px;
+                overflow-y:auto;
+            }
+            .q{
+                color: #9a0000;
+            }
+            .a{
+                color: #fe9967;
+            }
+            video{
+                position: absolute;
+                top: 85px;
+                width: 278px;
+                height: 157px;
+                left: 94px;
+                background:#000;
+                display: none;
+                z-index: 999;
+            }
         </style>
         
         <script type="text/javascript">
             $("#flipbook").turn({
                 width: 922,
                 height: 600,
-                autoCenter: false
+                autoCenter: true
+            });
+            function play(obj){
+                document.getElementById(obj).style.display="block";
+                document.getElementById(obj).play();
+            }
+            function gotoPage(i){
+                $('#flipbook').turn('page', i);
+            }
+            //$('#flipbook').turn('page', 2);
+            $("#flipbook").bind("turning", function(event, page, view) {
+                if(page!=1){
+                    //open
+                    document.getElementById("wrapbox").style.backgroundImage="url(res/book.png)";
+                }
+                if(page==1){
+                    //first
+                    document.getElementById("wrapbox").style.backgroundImage="none";
+                }
             });
         </script>
     </body>
