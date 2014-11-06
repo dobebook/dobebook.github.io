@@ -1,0 +1,178 @@
+@media screen and (max-width: 800px){
+    #allpage,#res,#tip,#menu{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .pc{
+        display: none;
+    }
+    .h1{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .h1 img{
+        width: 90%;
+    }
+    #wrapbox{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        
+    }
+    #wrap{
+        position: relative;
+        width: 100%;
+        height: auto;
+        left: 0px;
+        top: 0px;
+        float: left;
+        padding-bottom: 20px;
+    }
+    #flipbook{
+        width: 100%;
+    }
+    .box{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    h2{
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    p,.pagepage{
+        width: 100%;
+        font-size: 14px;
+        line-height: 25px;
+        
+    }
+    .pagepage{
+        margin: 10px 0px 0px 0px;
+    }
+    ul{
+        position: inherit;
+        height: auto;
+    }
+    li{
+        position: inherit;
+        list-style: none;
+        height: 40px;
+        line-height: 40px;
+        margin: 10px 0px 0px 0px;
+        padding-bottom: 10px;
+        border-bottom:dotted  1px #13b58d;
+    }
+    .page{
+        position: relative;
+        width: 100%;
+        height: auto;
+        top: 0;
+        left: 0;
+        left: 0px;
+        top: 0px;
+        margin: 20px 0px 0px 0px;
+    }
+    .imgpage{
+        width: 100%;
+    }
+    .facebg,.pagebg{
+        width: 100%;
+        height: auto;
+        float: left;
+        margin: 20px 0px 0px 0px;
+    }
+    .face1,.face2{
+        float: left;
+        clear: left;
+        width: 15%;
+        border-radius: 100%;
+        margin: 20px 0px 0px 0px;
+        border: solid 1px rgba(0,0,0,.2);
+        box-shadow: 0 0 10px 0px rgba(0,0,0,.3);
+    }
+    .info1,.info2{
+        float: left;
+        clear: none;
+        width: 80%;
+        margin: 20px 0px 0px 0px;
+    }
+    .info1 h2,.info2 h2{
+        float: left;
+        clear: none;
+        width: 95%;
+        margin: 0px 0px 0px 5%;
+        font-size: 14px;
+    }
+    .info1 p,.info2 p{
+        float: left;
+        clear: none;
+        width: 95%;
+        margin: 0px 0px 0px 5%;
+        font-size: 14px;
+    }
+    .face{
+        width: 100%;
+        height: auto;
+        position: relative;
+        float: left;
+        
+    }
+    .face img{
+        width: 100%;
+    }
+    .playbox{
+        position: absolute;
+        width: 50%;
+        left: 50%;
+        height: 50%;
+        top: 50%;
+    }
+    .play{
+        position: absolute;
+        width: 53px;
+        height: 53px;
+        background: url(res/play.png);
+        top: -26px;
+        left:-26px;
+    }
+    video{
+        position: absolute;
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        left: 0px;
+        z-index: 99;
+        background: #000;
+    }
+    h1,.menu{
+        font-size: 18px;
+        height: 30px;
+        line-height: 30px;
+        background: rgb(71, 193, 168);
+        padding: 0.3em 0em 0.3em 0.5em;
+        color: #fff;
+        overflow: hidden;
+        border-radius: 3px;
+        border-top: solid .8px #14eeb8;
+        border-bottom: solid 1px #13b58d;
+    }
+    .info{
+        margin: 10px 0px 0px 0px;
+    }
+                .q{
+                color: #9a0000;
+            }
+            .a{
+                color: #fe9967;
+            }
+}

@@ -1,0 +1,20 @@
+.left{
+                position: absolute;
+                background: url(res/left.png);
+                width: 34px;
+                height: 40px;
+                bottom: 0px;
+                left: 0px;
+    cursor: pointer;
+    display: block;
+            }
+            .right{
+                position: absolute;
+                background: url(res/right.png);
+                width: 34px;
+                height: 40px;
+                bottom: 0px;
+                right: 0px;
+                    cursor: pointer;
+                display: block;
+            }
